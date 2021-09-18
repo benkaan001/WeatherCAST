@@ -19,6 +19,27 @@ var futureForecastContainerEl = document.querySelector("#future-forecast-contain
 var searchHistoryButtonEl = document.querySelector("#search-history");
 
 
+var formSubmitHandler = function(event){
+    event.preventDefault();
+    var cityname = citySearchInputEl.value.trim();
+    if(cityname){
+        citySearchInputEl.value ="";
+        getWeather(cityname);
+
+        // ***********LINK HERE FOR CITY SEARCH INPUTS
+
+    }else{
+        alert("PLEASE ENTER A VALID CITY NAME!")
+    }
+    saveSearch();
+};
+
+var cityList =[];
+
+var saveSearch = function(){
+    localStorage.setItem("cityList", JSON.stringify(cityList));
+};
+
 
 
 var getWeather = function(cityname){

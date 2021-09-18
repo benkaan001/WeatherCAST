@@ -9,6 +9,15 @@
 // });
 // console.log("outside");
 
+var citynameInputEl = document.querySelector("#city-name");
+var citySearchFormEl = document.querySelector("city-search-form");
+var citySearchInputEl = document.querySelector("searched-city");
+
+var presentForecastContainerEl = document.querySelector("#present-forecast-container");
+var fiveDayForecastHeader = document.querySelector("#five-day-forecast");
+var futureForecastContainerEl = document.querySelector("#future-forecast-container");
+var searchHistoryButtonEl = document.querySelector("#search-history");
+
 
 
 

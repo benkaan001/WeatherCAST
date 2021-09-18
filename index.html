@@ -9,28 +9,38 @@
     <title>WeatherCAST</title>
 </head>
 <body>
-    <header>
+    <header class="text-center bg-primary navbar-dark">
         <h1>WeatherCAST</h1>
     </header>
     <main class="container">
         <div class="row">
-            <div class="col-1 col-md-4">
-                <form>
+            <div class="col-12 col-md-4 search-column">
+                <form class="border" id="search-city-form"> 
                 <h3>Please Enter A City Name</h3>
-                <input class="form-input">
+                <input class="form-input" id="city-name" type="text" autofocus="true">
                 <button class="btn btn-primary" type="sumbit">Search</button>
                 </form>
+                <div id="search-history"> Search History Will Go Here </div>
 
             </div>
+
+
             <div class="col-12 col-md-8">
-                <div class="row">
+                <div class="row" id="present-forecast">
+                    <div class="col-12">
+                        <h3 id="searched-city">Searched City Will Display Here</h3> 
+                        <div class="list-group" id="present-forecast-container"></div>
+
+                    </div>
 
 
                 </div>
 
 
 
-                <div class="row">
+                <div class="row" id="future-forecast">
+                    <h3 class="col-12" id="five-day-forecast">Five-Day-Forecast Will Display Here</h3>
+                    <div class="d-flex" id="future-forecast-container"></div>
 
 
                 </div>

@@ -41,7 +41,11 @@ https://benkaan001.github.io/WeatherCAST/
 
 ## Functionality
 
-*  The application displays 
+*  The user is asked to enter a city name into the input field, which later is saved in the search history section under the search input field.
+
+*  Once user enters a valid city name, current weather conditions for that city along with the city name, the date, an icon representation of the current weather condition, the temperature, the humidity, and the wind speed displays. 
+
+* Addtionally, the user is presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity. 
 
 
 ## License

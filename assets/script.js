@@ -158,11 +158,29 @@ var displayFiveDayForecast = function (weather) {
     forecastTempratureEl.textContent = dailyForecast.main.temp + " °F";
     forecastEl.appendChild(forecastTempratureEl);
 
+    // span for feels like temperature
+
+    var forecastFeelsLikeEl = document.createElement("span");
+    forecastFeelsLikeEl.classList = " card-body text-center";
+    forecastFeelsLikeEl.textContent= "Feels " + dailyForecast.main.feels_like + " °F";
+    forecastEl.appendChild(forecastFeelsLikeEl);
+    
+
     // span for humidity
     var forecastHumidityEl = document.createElement("span");
     forecastHumidityEl.classList = "card-body text-center";
     forecastHumidityEl.textContent = dailyForecast.main.humidity + "  %";
     forecastEl.appendChild(forecastHumidityEl);
+
+    // span for windspeed 
+
+    var forecastWindSpeedEl = document.createElement("span");
+    forecastWindSpeedEl.classList = " card-body text-center";
+    forecastWindSpeedEl.textContent= dailyForecast.wind.speed + " mph";
+    forecastEl.appendChild(forecastWindSpeedEl);
+
+    
+
 
     // append
     futureForecastContainerEl.appendChild(forecastEl);

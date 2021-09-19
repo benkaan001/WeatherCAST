@@ -33,6 +33,8 @@ The purpose of this project is to create a simple weather dashboard application 
 
 https://benkaan001.github.io/WeatherCAST/ 
 
+![Screen Shot 2021-09-19 at 5 02 31 PM](https://user-images.githubusercontent.com/88162275/133944491-6e16cf48-dfe9-4ffd-bb76-f3936960a42b.png)
+
 
 
 

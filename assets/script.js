@@ -13,7 +13,7 @@ var searchHistoryButtonEl = document.querySelector("#search-history");
 
 var cityList = [];
 
-var formSubmitHandler = function (event) {
+$("#city-search-form").on("submit", function(event){
   event.preventDefault();
   var city = cityInputEl.value.trim();
   if (city) {
@@ -21,12 +21,12 @@ var formSubmitHandler = function (event) {
     getFiveDayForecast(city);
     cityInputEl.value = "";
   } else {
-    alert("Invalid City Name!");
-  }
+    alert("Invalid City Name!")
+}
 
   saveCitySearch();
   searchHistory(city);
-};
+});
 
 var saveCitySearch = function (city) {
   cityList.push(city);
@@ -187,5 +187,9 @@ var searchHistoryEventHandler = function (event) {
   }
 };
 
-citySearchFormEl.addEventListener("submit", formSubmitHandler);
-searchHistoryButtonEl.addEventListener("click", searchHistoryEventHandler);
+
+// incorporating jQuery 
+$("#search-history").on("click", function(event){
+  saveCitySearch();
+  searchHistory(city);
+});

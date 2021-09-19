@@ -93,6 +93,13 @@ var weatherDisplay = function (weather, searchCity) {
   temperatureEl.classList = "list-group-item";
   presentForecastContainerEl.appendChild(temperatureEl);
 
+  // spand to hold feels like info
+
+  var feelsLikeEl = document.createElement("span");
+  feelsLikeEl.textContent = "Feels Like: " + weather.main.feels_like + " °F";
+  feelsLikeEl.classList = "list-group-item";
+  presentForecastContainerEl.appendChild(feelsLikeEl);
+
   //span to hold wind info
   var windSpeedEl = document.createElement("span");
   windSpeedEl.textContent = "Wind Speed: " + weather.wind.speed + " mph";
@@ -164,7 +171,7 @@ var displayFiveDayForecast = function (weather) {
     forecastFeelsLikeEl.classList = " card-body text-center";
     forecastFeelsLikeEl.textContent= "Feels " + dailyForecast.main.feels_like + " °F";
     forecastEl.appendChild(forecastFeelsLikeEl);
-    
+
 
     // span for humidity
     var forecastHumidityEl = document.createElement("span");

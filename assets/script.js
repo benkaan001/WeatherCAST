@@ -64,13 +64,50 @@ var getOneCall = function(lat,lon) {
     
     //One-Call API may need to (optional) + &exclude={part} ----> part look up
 
-    var apiURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" +lat + "&lon=" + lon+ "&appid=049287381c116e50be8c10a4efd8f47c";
+    var apiURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" +lat + "&lon=" + lon+ "&exclude=current,hourly,minutely,alerts&appid=049287381c116e50be8c10a4efd8f47c";
     fetch(apiURL)
     .then(function(response){
         response.json().then(function(data){
             getOneCall(data)
         })
     })
+};
+
+var weatherDisplay = function(weather, searchCity) {
+
+//span to display the date
+
+dateSpanEl = document.createElement("span");
+dateSpanEl. textContent = moment(weather.dt.value).format("MMMM DD, YYYY");
+citySearchInputEl.appendChild(dateSpanEl);
+
+
+
+// span to hold temperature info
+
+var temperatureSpanEl = document.createElement("span");
+temperatureSpanEl.textContent = "TEMPERATURE: " + " °F ";
+temperatureSpanEl.classList = "list-group-item";
+
+// span to hold wind info
+
+var windSpanEl = document.createElement("span");
+windSpanEl.textContent = "WIND SPEED: " + "  MPH";
+windSpanEl.classList = "list-group-item";
+
+// span to hold humidity info
+
+var humiditySpanEl = document.createElement("span");
+humiditySpanEl.textContent = "HUMIDITY: " + " %";
+humiditySpanEl.classList = "list-group-item";
+
+// img icon
+
+var weatherIcon = document.createElement("img");
+weatherIcon.setAttribute("src", "https://openweathermap.org/img/wn/" + weather.weather[0].icon + "@2x.png");
+citySearchInputEl.appendChild(weatherIcon);
+
+
 };
 
 
@@ -82,6 +119,7 @@ var getOneCall = function(lat,lon) {
 
 
 
+// icon URL src http://openweathermap.org/img/wn/10d@2x.png
 
 
  //SAVE THIS TO THE END*******************************************

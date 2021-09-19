@@ -42,7 +42,7 @@ https://benkaan001.github.io/WeatherCAST/
 
 ## Functionality
 
-*  The user is asked to enter a city name into the input field, which later is saved in the search history section under the search input field.
+*  The user is asked to enter a city name into the input field, which persists in the search history section under the search input field. 
 
 *  Once user enters a valid city name, current weather conditions for that city along with the city name, the date, an icon representation of the current weather condition, the temperature, the feels-like temprature, the humidity, and the wind speed values display. 
 

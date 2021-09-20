@@ -4,9 +4,9 @@
 
 * [Purpose](#purpose)
 * [Technologies](#technologies)
+* [Third-Party APIs/Libraries](#third-party=APIs/libraries)
 * [Preview](#preview)
 * [Functionality](#functionality)
-* [Features](#features)
 * [License](#license)
 
 ## Purpose
